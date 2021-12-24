@@ -23,7 +23,7 @@ export const useMount = (callback: () => void) => {
 };
 
 // 防抖hook，对input的传入参数进行debounce
-export const useDebounce = (value: unknown, delay?: number): any => {
+export const useDebounce = <V>(value: V, delay?: number) => {
   const [debouncedValue, setDebouncedValue] = useState(value);
 
   useEffect(() => {
